@@ -69,11 +69,6 @@ PRODUCT_PACKAGES += \
     ethertypes \
     libebtc
 
-# FM
-PRODUCT_PACKAGES += \
-    FMRadio \
-    libfmjni
-
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8226
@@ -150,7 +145,6 @@ PRODUCT_PACKAGES += \
     init.qcom.power.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
-    init.recovery.qcom.rc \
     ueventd.qcom.rc
 
 # Wifi
