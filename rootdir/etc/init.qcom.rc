@@ -50,6 +50,10 @@ on init
     symlink /sdcard /storage/sdcard0
     symlink /vendor/lib/egl /egl
 
+    # Enable mass storage mounting
+    write /sys/devices/platform/msm_hsusb/gadget/lun0/file 0
+    write /proc/sys/kernel/printk 8
+
 on fs
     mount_all fstab.qcom
 
@@ -487,11 +491,6 @@ on boot
     write /proc/sys/net/core/rmem_max  2097152
     write /proc/sys/net/core/wmem_max  2097152
 
-on charger
-    wait /dev/block/platform/msm_sdcc.1/by-name/system
-    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/system /system ro barrier=1
-    class_start charger
-
 # Services
 service adsprpcd /system/bin/adsprpcd
     class main
@@ -503,7 +502,7 @@ service audiod /system/bin/audiod
     user system
     group system
 
-service charger /sbin/healthd -c
+service charger /charger
     class charger
     critical
     seclabel u:r:healthd:s0
@@ -556,18 +555,13 @@ service qseecomd /system/bin/qseecomd
     user root
     group root
 
-service rfs_access /system/bin/rfs_access
-    class core
-    user system
-    group system net_raw
-
 service rmt_storage /system/bin/rmt_storage
-    class core
-    user root
-    disabled
+   class core
+   user root
+   group system
+   disabled
 
 on property:ro.boot.emmc=true
-    start rfs_access
     start rmt_storage
 
 # Limit to SoC reset (1) and independent SSR (3)
