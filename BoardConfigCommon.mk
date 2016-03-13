@@ -52,6 +52,12 @@ CHARGING_ENABLED_PATH := /sys/class/power_supply/battery/batt_lp_charging
 # CMHW
 BOARD_HARDWARE_CLASS += $(VENDOR_PATH)/cmhw
 
+# RIL
+BOARD_VENDOR := samsung
+BOARD_MOBILEDATA_INTERFACE_NAME := "rmnet0"
+BOARD_PROVIDES_LIBRIL := true
+#TARGET_RIL_VARIANT := caf
+
 # Custom RIL class
 BOARD_RIL_CLASS := ../../../$(VENDOR_PATH)/ril
 
