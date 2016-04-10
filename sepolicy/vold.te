@@ -1,0 +1,9 @@
+allow vold efs_file:dir r_file_perms;
+allow vold persist_file:dir r_file_perms;
+allow vold firmware_file:dir search;
+allow vold firmware_file:file r_file_perms;
+#
+allow vold unlabeled:filesystem unmount;
+allow vold logd:dir search;
+allow vold logd:file read;
+allow vold logd:file getattr;

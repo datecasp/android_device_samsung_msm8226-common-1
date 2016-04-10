@@ -1,0 +1,30 @@
+From a18ed9d2cf08191a6220d761a71b1cec96b1751e Mon Sep 17 00:00:00 2001
+From: sub77 <sub77@ymail.com>
+Date: Tue, 15 Mar 2016 09:23:18 -0500
+Subject: [PATCH] create EMPTY folder
+
+Change-Id: I3d4f43e84f69adc6a7ae68f8eb58ba3a5e1bc75e
+---
+ start-ssh | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/start-ssh b/start-ssh
+index 62d87da..076f13a 100644
+--- a/start-ssh
++++ b/start-ssh
+@@ -10,6 +10,12 @@ RSA_KEY=/data/ssh/ssh_host_rsa_key
+ RSA_PUB_KEY=/data/ssh/ssh_host_rsa_key.pub
+ AUTHORIZED_KEYS=/data/ssh/authorized_keys
+ DEFAULT_AUTHORIZED_KEYS=/system/etc/security/authorized_keys.default
++SSH_EMPTY=/data/ssh/empty
++
++if [ ! -f $SSH_EMPTY ]; then
++    mkdir -p $SSH_EMPTY
++    chmod 600 $SSH_EMPTY
++fi
+ 
+ if [ ! -f $DSA_KEY ]; then
+     /system/bin/ssh-keygen -t dsa -f $DSA_KEY -N ""
+-- 
+1.9.1
+
