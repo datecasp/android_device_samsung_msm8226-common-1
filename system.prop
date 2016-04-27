@@ -1,4 +1,5 @@
-# Art
+# Android Run Time
+ro.sys.fw.dex2oat_thread_count=4
 dalvik.vm.dex2oat-swap=false
 
 # Audio
