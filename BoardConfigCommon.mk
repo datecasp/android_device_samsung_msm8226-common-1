@@ -18,9 +18,9 @@
 VENDOR_PATH := device/samsung/msm8226-common
 
 # Init
+TARGET_INIT_VENDOR_LIB := libinit_samsung
+TARGET_RECOVERY_DEVICE_MODULES := libinit_samsung
 TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE := $(VENDOR_PATH)/init/init_msm8226.cpp
 
 TARGET_SPECIFIC_HEADER_PATH := $(VENDOR_PATH)/include
 
