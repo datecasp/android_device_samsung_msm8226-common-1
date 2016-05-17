@@ -24,6 +24,11 @@ TARGET_LIBINIT_DEFINES_FILE := $(VENDOR_PATH)/init/init_msm8226.cpp
 
 TARGET_SPECIFIC_HEADER_PATH := $(VENDOR_PATH)/include
 
+# Platform
+TARGET_BOARD_PLATFORM := msm8226
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno305
+#USE_CLANG_PLATFORM_BUILD := true
+
 # Architecture
 TARGET_CPU_MEMCPY_BASE_OPT_DISABLE := true
 TARGET_CPU_VARIANT := krait
@@ -118,11 +123,6 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
-
-# Platform
-TARGET_BOARD_PLATFORM := msm8226
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno305
-USE_CLANG_PLATFORM_BUILD := true
 
 # Properties (reset them here, include more in device if needed)
 TARGET_SYSTEM_PROP := $(VENDOR_PATH)/system.prop
