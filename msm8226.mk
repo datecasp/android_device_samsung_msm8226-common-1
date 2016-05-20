@@ -191,6 +191,10 @@ PRODUCT_PACKAGES += \
    com.dsi.ant.antradio_library \
    libantradio
 
+# OpenDelta
+PRODUCT_PACKAGES += \
+   OpenDelta
+
 # Default Properties
 ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0 ro.adb.secure=0 persist.sys.usb.config=mtp
 
