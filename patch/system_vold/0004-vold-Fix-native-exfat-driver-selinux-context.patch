@@ -1,0 +1,26 @@
+From 8c5d1c598da35eab838e44acf866c707494dfe36 Mon Sep 17 00:00:00 2001
+From: sub77 <sub77@ymail.com>
+Date: Sat, 21 May 2016 01:53:10 -0500
+Subject: [PATCH 4/4] vold: Fix native exfat driver selinux context
+
+Change-Id: I3f955da7255842ad4efd3ce1a77e496abeb54612
+---
+ fs/Exfat.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/fs/Exfat.cpp b/fs/Exfat.cpp
+index 7cfb019..14ac458 100644
+--- a/fs/Exfat.cpp
++++ b/fs/Exfat.cpp
+@@ -63,7 +63,7 @@ status_t Mount(const std::string& source, const std::string& target, bool ro,
+ 
+     sprintf(mountData,
+ #ifdef CONFIG_KERNEL_HAVE_EXFAT
+-            "noatime,nodev,nosuid,uid=%d,gid=%d,fmask=%o,dmask=%o,%s,%s",
++            "context=u:object_r:vfat:s0,noatime,nodev,nosuid,uid=%d,gid=%d,fmask=%o,dmask=%o,%s,%s",
+ #else
+             "noatime,nodev,nosuid,dirsync,uid=%d,gid=%d,fmask=%o,dmask=%o,%s,%s",
+ #endif
+-- 
+1.9.1
+
