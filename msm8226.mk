@@ -195,6 +195,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
    OpenDelta
 
+# FM
+PRODUCT_PACKAGES += \
+    FMRadio \
+    libfmjni
+
 # Default Properties
 ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0 ro.adb.secure=0 persist.sys.usb.config=mtp
 
