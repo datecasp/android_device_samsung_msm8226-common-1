@@ -1,7 +1,7 @@
-From 8f33fa0c272292b1f7084ae7a54e934bcecc89a1 Mon Sep 17 00:00:00 2001
+From 1c674a1291c6133008c57f3cb83b5b7c58fabdca Mon Sep 17 00:00:00 2001
 From: SpiritCroc <spiritcroc@gmail.com>
 Date: Mon, 2 May 2016 09:55:54 +0200
-Subject: [PATCH] Slim Recent App Sidebar [2/2]
+Subject: [PATCH 2/2] Slim Recent App Sidebar [2/2]
 
 One thing I was missing with SlimRecents was the possibility to launch your favorite apps
 from the recents screen. As SlimRecents covers only the half of the screen (more or less),
@@ -45,12 +45,12 @@ Conflicts:
  create mode 100644 src/com/dirtyunicorns/dutweaks/fragments/RecentAppSidebarFragment.java
 
 diff --git a/res/values/strings.xml b/res/values/strings.xml
-index 218bcdd..4e3f839 100644
+index 76deff8..401b3d5 100644
 --- a/res/values/strings.xml
 +++ b/res/values/strings.xml
-@@ -963,4 +963,18 @@
-     <string name="lock_screen_show_current">Charging current</string>
-     <string name="lock_screen_show_current_summary">Show charging current rate on lock screen</string>
+@@ -974,4 +974,18 @@
+     <string name="qs_set_animation_style">Animation is set to %1$s</string>
+     <string name="qs_set_animation_duration">Animation duration is set to %1$s</string>
  
 +    <!-- Slim Recent App Sidebar  -->
 +    <string name="recent_panel_category">Slim Recents</string>
