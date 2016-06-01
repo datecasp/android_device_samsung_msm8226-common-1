@@ -117,7 +117,12 @@ AUDIO_FEATURE_DISABLED_FM := true
 EXTENDED_FONT_FOOTPRINT := true
 
 # Kernel
+KERNEL_TOOLCHAIN := /home/sub77/roms/du/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-5.3-uber/bin
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
+TARGET_NDK_VERSION_EXP := 5.3-uber
+TARGET_GCC_VERSION_EXP := 5.3-uber
+TARGET_KERNEL_VERSION_EXP := 5.3-uber
+TARGET_CLANG_VERSION_EXP := 3.9-opt
 
 # Partitions and Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
