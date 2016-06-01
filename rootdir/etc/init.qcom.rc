@@ -509,18 +509,6 @@ service charger /charger
     critical
     seclabel u:r:healthd:s0
 
-service lpm /system/bin/lpm
-    class charger
-    disabled
-    oneshot
-    seclabel u:r:healthd:s0
-
-service lpm-delay /system/bin/lpm-delay
-    class charger
-    disabled
-    oneshot
-    seclabel u:r:healthd:s0
-
 service ds_fmc_appd /system/bin/ds_fmc_appd -p "rmnet0" -D
     class late_start
     group radio wifi inet
@@ -699,6 +687,3 @@ on property:ro.radio.noril=1
 
 on property:persist.radio.noril=1
     setprop ro.radio.noril 1
-
-on property:ro.bootmode=charger
-    start lpm-delay
