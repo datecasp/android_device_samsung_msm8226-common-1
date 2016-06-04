@@ -120,7 +120,7 @@ TARGET_NO_SENSOR_PERMISSION_CHECK := true
 EXTENDED_FONT_FOOTPRINT := true
 
 # Kernel
-#KERNEL_TOOLCHAIN := /home/sub77/roms/du/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-5.3-uber/bin
+TARGET_KERNEL_CONFIG := du_msm8226_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 TARGET_NDK_VERSION_EXP := 5.3-uber
 TARGET_GCC_VERSION_EXP := 5.3-uber
