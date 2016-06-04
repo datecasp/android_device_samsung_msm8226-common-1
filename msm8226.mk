@@ -151,13 +151,14 @@ PRODUCT_PACKAGES += \
     init.qcom.power.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
+    init.recovery.qcom.rc \
     init.target.rc \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
     init.crda.sh \
     init.qcom.bt.sh
-
+    
 # Wifi
 PRODUCT_PACKAGES += \
     dhcpcd.conf \

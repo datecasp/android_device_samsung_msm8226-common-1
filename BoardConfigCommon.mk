@@ -51,12 +51,18 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_USE_COMPAT_GRALLOC_ALIGN := true
 TARGET_USES_CPU_BOOST_HINT := true
 
-# Charger
+#Charging mode
+BOARD_CHARGING_MODE_BOOTING_LPM := "/sys/class/power_supply/battery/batt_lp_charging"
 BOARD_BATTERY_DEVICE_NAME := "battery"
 BOARD_CHARGING_CMDLINE_NAME := "androidboot.bootchg"
 BOARD_CHARGING_CMDLINE_VALUE := "true"
+BOARD_CHARGER_DISABLE_INIT_BLANK := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_SHOW_PERCENTAGE := true
+
+# Healthd
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.msm8226
+BOARD_HEALTHD_CUSTOM_CHARGER_RES := device/samsung/msm8226-common/libhealthd/images
 
 # CMHW
 BOARD_HARDWARE_CLASS += $(VENDOR_PATH)/cmhw
@@ -114,7 +120,7 @@ TARGET_NO_SENSOR_PERMISSION_CHECK := true
 EXTENDED_FONT_FOOTPRINT := true
 
 # Kernel
-KERNEL_TOOLCHAIN := /home/sub77/roms/du/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-5.3-uber/bin
+#KERNEL_TOOLCHAIN := /home/sub77/roms/du/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-5.3-uber/bin
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 TARGET_NDK_VERSION_EXP := 5.3-uber
 TARGET_GCC_VERSION_EXP := 5.3-uber
