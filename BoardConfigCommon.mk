@@ -22,6 +22,8 @@ TARGET_INIT_VENDOR_LIB := libinit_samsung
 TARGET_RECOVERY_DEVICE_MODULES := libinit_samsung
 TARGET_UNIFIED_DEVICE := true
 
+# Kernel
+BOARD_KERNEL_CMDLINE += androidboot.llcon=2,100,0,0x00,24,1280,720,720,8,0
 TARGET_SPECIFIC_HEADER_PATH := $(VENDOR_PATH)/include
 
 # Platform
