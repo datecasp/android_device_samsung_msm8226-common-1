@@ -46,6 +46,7 @@ void vendor_load_properties()
     char bootloader[PROP_VALUE_MAX];
     char device[PROP_VALUE_MAX];
     char devicename[PROP_VALUE_MAX];
+    char value[PROP_VALUE_MAX];
     int rc;
 
     rc = property_get("ro.board.platform", platform);
@@ -110,4 +111,11 @@ void vendor_load_properties()
     property_get("ro.product.device", device);
     strlcpy(devicename, device, sizeof(devicename));
     INFO("Found bootloader id %s setting build properties for %s device\n", bootloader, devicename);
+
+    rc = property_get("ro.boot.llcon", value);
+    if (rc > 0) {
+        if (value[0] != '0')
+            property_set("debug.sf.nobootanimation", "1");
+            INFO("Found LLCON\n");
+    }
 }
