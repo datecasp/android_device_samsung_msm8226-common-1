@@ -62,7 +62,6 @@ void vendor_load_properties()
       property_set("ro.product.device", "matissewifi");
       property_set("ro.radio.noril", "1");
       property_set("ro.carrier", "wifi-only");
-      property_set("ro.sf.lcd_density", "160");
     } else if (strstr(bootloader, "T531")) {
       property_set("ro.build.fingerprint", "samsung/matisse3gxx/matisse3g:5.0.2/LRX22G/T531XXU1BOD8:user/release-keys");
       property_set("ro.build.description", "matisse3gxx-user 5.0.2 LRX22G T531XXU1BOD8 release-keys");
@@ -71,7 +70,6 @@ void vendor_load_properties()
       property_set("telephony.lteOnGsmDevice", "0");
       property_set("ro.telephony.default_network", "0");
       property_set("ro.telephony.ril_class", "SamsungMSM8226RIL");
-      property_set("ro.sf.lcd_density", "160");
     } else if (strstr(bootloader, "T535")) {
       property_set("ro.build.fingerprint", "samsung/matisseltexx/matisselte:5.0.2/LRX22G/T535XXU1BOD8:user/release-keys");
       property_set("ro.build.description", "matisseltexx-user 5.0.2 LRX22G T535XXU1BOD8 release-keys");
@@ -79,7 +77,6 @@ void vendor_load_properties()
       property_set("ro.product.device", "matisselte");
       property_set("telephony.lteOnGsmDevice", "0");
       property_set("ro.telephony.default_network", "0");
-      property_set("ro.sf.lcd_density", "160");
       property_set("ro.telephony.ril_class", "SamsungMSM8226RIL");
     } else if (strstr(bootloader, "T330")) {
       property_set("ro.build.fingerprint", "samsung/milletwifixx/milletwifi:5.0.2/LRX22G/T330XXU1BOD8:user/release-keys");
@@ -88,7 +85,6 @@ void vendor_load_properties()
       property_set("ro.product.device", "milletwifi");
       property_set("ro.carrier", "wifi-only");
       property_set("ro.radio.noril", "1");
-      property_set("ro.sf.lcd_density", "213");
     } else if (strstr(bootloader, "T331")) {
       property_set("ro.build.fingerprint", "samsung/millet3gxx/millet3g:5.0.2/LRX22G/T331XXU1BOD8:user/release-keys");
       property_set("ro.build.description", "millet3gxx-user 5.0.2 LRX22G T331XXU1BOD8 release-keys");
@@ -97,7 +93,6 @@ void vendor_load_properties()
       property_set("ro.telephony.ril_class", "SamsungMSM8226RIL");
       property_set("telephony.lteOnGsmDevice", "0");
       property_set("ro.telephony.default_network", "0");
-      property_set("ro.sf.lcd_density", "213");
     } else if (strstr(bootloader, "T335")) {
       property_set("ro.build.fingerprint", "samsung/milletltexx/milletlte:5.0.2/LRX22G/T335XXU1BOD8:user/release-keys");
       property_set("ro.build.description", "milletltexx-user 5.0.2 LRX22G T335XXU1BOD8 release-keys");
@@ -105,7 +100,6 @@ void vendor_load_properties()
       property_set("ro.product.device", "milletlte");
       property_set("telephony.lteOnGsmDevice", "0");
       property_set("ro.telephony.default_network", "0");
-      property_set("ro.sf.lcd_density", "213");
     } 
 
     property_get("ro.product.device", device);
