@@ -168,3 +168,11 @@ TARGET_USES_WCNSS_CTRL           := true
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 WIFI_DRIVER_FW_PATH_STA          := "sta"
 WIFI_DRIVER_FW_PATH_AP           := "ap"
+
+# Optimize-it!!
+#export STRICT_ALIASING := true
+#export ENABLE_GCCONLY := true
+#export GRAPHITE_OPTS := true
+#export CLANG_O3 := true
+#export ENABLE_SANITIZE := true
+#export USE_PIPE := true
