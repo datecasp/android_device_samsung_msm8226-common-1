@@ -1,0 +1,25 @@
+From d44c967e4be3f247ad29a1498ecb597d632e171c Mon Sep 17 00:00:00 2001
+From: sub77 <sub77@ymail.com>
+Date: Sun, 7 Aug 2016 00:58:21 +0200
+Subject: [PATCH] landscape
+
+---
+ AndroidManifest.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/AndroidManifest.xml b/AndroidManifest.xml
+index eb5fb9f..1c8c86c 100644
+--- a/AndroidManifest.xml
++++ b/AndroidManifest.xml
+@@ -59,7 +59,7 @@
+             android:configChanges="orientation|screenSize|keyboardHidden"
+             android:label="@string/app_name"
+             android:launchMode="singleTop"
+-            android:screenOrientation="portrait"
++            android:screenOrientation="landscape"
+             android:taskAffinity="com.android.camera.CameraActivity"
+             android:theme="@style/Theme.Camera"
+             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+-- 
+1.9.1
+
